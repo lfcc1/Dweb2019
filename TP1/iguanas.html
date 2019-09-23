@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Iguanas DAW</title>
+	<meta charset="UTF-8">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+
+	<style type="text/css">
+	dt {
+    	padding-top: 20px;
+    	padding-bottom:5px;
+    	font-weight:normal
+  	}	
+  	dd {
+    	padding: 10px;
+    	font-size: 20px;
+    	padding-bottom:  30px;
+  	}	
+
+  	ul.alim li {
+  		display:inline;
+  		padding-right: 50px;
+  		font-size: 20px;
+	}
+
+	  	p {
+  		font-size: 20px;
+	}
+
+	td{
+		font-size: 20px;
+	}
+
+	tr{
+		font-size: 20px;
+	}
+
+	.sidenav {
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: left 0.3s;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 150px; 
+  font-size: 28px; 
+  padding: 0px 10px;
+}
+
+
+
+.tablecss {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+
+}
+
+.tablecss td, .tablecss th {
+  border: 1px solid #ddd;
+  padding: 8px;
+
+
+}
+
+.tablecss tr:nth-child(even){background-color: #ffffff;}
+.tablecss tr:nth-child(odd){background-color: #f2f2f2;}
+
+.tablecss tr:hover {background-color: #ddd;}
+
+.tablecss th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #009900;
+  color: white;
+}
+
+
+
+	</style>
+
+</head>
+<body style="background-color:#e6ffe6;">
+
+
+
+	<div class="sidenav" id = navbar>
+		<div style="float:right; padding-right: 5px;">
+		<button class="btn" onclick="showBar()"><i class="fa fa-bars"></i></button>
+	</div>
+		<center><b><p style="color: #cccccc;">MENU</p></b></center>
+
+  <a id = "asobre" href="#sobre">Sobre</a>
+  <a id = "aespecies" href="#especies">Espécies</a>
+  <a id = "aaliment" href="#aliment">Alimentação</a>
+  <a id = "ahabitat" href="#habitat">Especificidades</a>
+  <a  id = "acreditos" href="#creditos">Créditos</a>
+	</div>
+	<div class="main" id ="maindiv">
+	<h1 id = "sobre"><center><b>Iguanas</b></center></h1>
+
+	<div class="container-fluid">
+	
+	<p style = "text-align: justify;">&emsp;Iguana é um género de réptil da família <i>Iguanidae</i>. As espécies deste género ocorrem em regiões tropicais da América Central, 	América do Sul e Caribe.<br>
+		&emsp;As iguanas têm hábitos arborícolas, isto é, vivem em árvores, podendo atingir até 180 cm de comprimento. Quando jovens, os iguanas possuem uma coloração verde intensa, já quando maiores, apresentam, ao longo do corpo, listras escuras. A cauda de uma iguana possui dois terços do comprimento total do corpo. Iguanas podem ser criados em terrário tropical úmido, por habitar florestas tropicais.
+	</p>
+		<center>
+	<hr>
+	<h2 id = "especies"> <b>Espécies de Iguanas</b></h2>
+	
+	<dl>
+  		<dt> Iguana Verde</dt>
+  		<dd>&emsp;Este lagarto arbóreo típico da América Latina (habita do México ao Paraguai) pode medir dois metros de comprimento e pesar cerca de 15 quilos.
+  			</dd>
+  			<img src="https://meusanimais.com.br/wp-content/uploads/2018/12/5-especies-de-iguanas.jpg" width="500" height="333">
+  			<hr>
+  		<dt>Iguana Marinha</dt>
+  		<dd>&emsp;Esta é outra espécie de iguanas, e trata-se do único lagarto dependente do mar, uma vez que se alimenta de algas. Dessa forma, os machos têm a capacidade de nadar.</dd>
+  		<img src="https://meusanimais.com.br/wp-content/uploads/2018/12/iguana-marinha.jpg" width="500" height="333">
+  		<hr>
+  		<dt>Iguana riscada</dt>
+  		<dd>&emsp;Esta iguana do gênero Ctenosaura, também conhecida como garrobo, vive na América Central, especificamente no Panamá.</dd>
+  		<img src="https://meusanimais.com.br/wp-content/uploads/2018/12/iguana-riscada.jpg" width="500" height="333">
+	</dl>
+	<hr>
+	<h2 id = "aliment"><b>Alimentação</b></h2>
+	<p style = "text-align: justify;">
+	&emsp;As iguanas domésticas devem apenas consumir alimento vegetal, nunca alimento de procedência animal. Lembre-se que as iguanas alimentadas corretamente podem chegar a viver até 20 anos. Se as alimentar adicionando grilos ou vermes, raramente viverão mais de 8 anos.
+	</p>
+
+	<hr>	
+
+	<h3>Alimentos recomendados</h3>
+
+	<ul class="alim">
+	  <li>&bull; Aipo</li>
+	  <li>&bull; Peras</li>
+	  <li>&bull; Nabos</li>
+	  <li>&bull; Melão</li>
+
+	</ul> 
+	<ul class="alim"=>
+		  <li>&bull; Figos</li>
+	  <li>&bull; Coentro</li>
+	  <li>&bull; Abobrinha</li>
+	  <li>&bull; Cerejas</li>
+	  </ul> 
+
+	<hr>	
+	<h3>Alimentos não recomendados</h3>	
+	<ul class="alim">
+	  <li>&bull; Uva</li>
+	  <li>&bull; Banana</li>
+	  <li>&bull; Cebola</li>
+	  <li>&bull; Broculis</li>
+
+	</ul> 
+	<ul class="alim"=>
+		  <li>&bull; Ananás</li>
+	  <li>&bull; Couve</li>
+	  <li>&bull; Couve-Flor</li>
+	  <li>&bull; Laranjas</li>
+	  </ul> 
+
+	  	<hr>	
+
+	<h2 id = "habitat"><b>Especificidades</b></h2>
+		<table class = "tablecss">
+          <thead>
+                <th><center>Nome</center></th>
+                <th><center>Tamanho</center></th>
+                <th><center>Peso</center></th>
+                <th><center>País</center></th>
+            </thead>
+            <tbody>
+            	<tr>
+            		<td>
+            			<center>Iguana Verde</center>
+            		</td>
+            		<td>
+            			<center>2 metros</center>
+            		</td>
+            		<td>
+            			<center>10kg</center>
+            		</td>
+            		<td>
+            			<center>Angola</center>
+            		</td>
+            	</tr>
+
+            	<tr>
+            		<td>
+            			<center>Iguana Marinha</center>
+            		</td>
+            		<td>
+            			<center>1.5 metros</center>
+            		</td>
+            		<td>
+            			<center>13kg</center>
+            		</td>
+            		<td>
+            			<center>África do Sul</center>
+            		</td>
+            	</tr>
+
+            	<tr>
+            		<td>
+            			<center>Iguana Riscada</center>
+            		</td>
+            		<td>
+            			<center>5 metros</center>
+            		</td>
+            		<td>
+            			<center>19kg</center>
+            		</td>
+            		<td>
+            			<center>Portugal</center>
+            		</td>
+            	</tr>
+            </tbody>
+        </table>
+
+		<hr>	
+
+	</center>
+
+	</div>
+
+	<footer>
+		<h3 id = "creditos">&emsp;Créditos</h3>
+  		<p>&emsp; Desenvolvido no àmbito da Unidade Curricular Desenvolvimento de Aplicações Web.</p>
+  		<p>&emsp; <a href="https://www.uminho.pt/PT" target="_blank">Universidade do Minho</a>.</p>
+	</footer>
+	</div>
+</body>
+
+<script type="text/javascript">
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+var i = 0;
+
+function showBar() {
+  if (i == 1) {
+    document.getElementById("navbar").style.left = "0";
+    document.getElementById("asobre").style.display = "block";
+    document.getElementById("aespecies").style.display = "block";
+    document.getElementById("aaliment").style.display = "block";
+    document.getElementById("ahabitat").style.display = "block";
+    document.getElementById("acreditos").style.display = "block";
+    document.getElementById("maindiv").style.marginLeft = "150px";
+    i = 0;
+    console.log("ffff");
+  } else {
+    document.getElementById("navbar").style.left = "-100px";
+    document.getElementById("asobre").style.display = "none";
+    document.getElementById("aespecies").style.display = "none";
+    document.getElementById("aaliment").style.display = "none";
+    document.getElementById("ahabitat").style.display = "none";
+    document.getElementById("acreditos").style.display = "none";
+    document.getElementById("maindiv").style.marginLeft = "50px";
+    i = 1;
+  }
+}
+
+</script>
+
+</html>
