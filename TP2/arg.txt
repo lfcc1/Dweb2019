@@ -1,0 +1,3 @@
+//ARQELEM[./CONCEL = " Amares "]/IDENTI
+distinct-values(//CONCEL)
+//ARQELEM[CONCEL = " Montalegre "]/DESCRI
