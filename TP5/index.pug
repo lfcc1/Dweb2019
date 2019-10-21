@@ -1,0 +1,68 @@
+extends layout
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container.w3-teal
+                h3 Gestão de Tarefas
+            .w3-container
+                h5(style ='display:inline-block;') 
+                    b Adicionar Tarefas
+                p(id='relogio' style ='display:inline-block; float: right;') 
+                form.w3-container(action='/tarefa' method ='POST')
+                    label.w3-sand
+                        b Tarefa
+                    input.w3-input.w3-border.w3-light-grey( required="required" type='text' name='tarefa')
+                    
+                    label.w3-teal
+                        b Data Limite
+                    input.w3-input.w3-border.w3-light-grey(id ='dataTarefa' type='datetime-local' name='dataLimite')
+                    
+                    script.
+                        function getData(tempo){  // tempo == 1  --- DATETIME sem segundos
+                            var today = new Date(); // tempo == 2  ---- TIME apenas
+                            var dd = today.getDate();
+                            var mm = today.getMonth()+1;
+
+                            var hour =today.getHours() ;
+                            var minutes = today.getMinutes();
+                            var seconds = today.getSeconds();
+                            var yyyy = today.getFullYear();
+
+                            if(dd<10){dd='0'+dd;} 
+                            if(mm<10){mm='0'+mm;} 
+                            if(hour<10){hour = '0'+hour;}
+                            if(minutes<10){minutes = '0'+minutes;}
+                            if(seconds<10){seconds = '0'+seconds;}
+
+                            var time1 = hour+ ":" + minutes;
+                            var time2 = hour+ ":" + minutes+":"+ seconds; 
+                            today = yyyy+'-'+mm+'-'+dd;
+                            
+                            if(tempo == 1 )
+                                return today+'T'+time1;
+                            else 
+                                return time2;
+
+                        }
+
+                        function setRelogio(){
+                            document.getElementById("relogio").innerHTML  = "Relógio:"+ getData(2);
+                        }
+                        setInterval(setRelogio, 1000);
+                        document.getElementById("dataTarefa").value = getData(1);
+
+                    input.w3-btn.w3-blue-grey(type = 'submit' value ='Enviar')
+                hr
+                h5 
+                    b Lista de Tarefas
+                table.w3-table-all
+                    tr
+                        th Tarefa
+                        th Data Limite
+                        each ta in lista
+                            tr
+                                td=ta.tarefa
+                                td=ta.dataLimite
+                br
+            footer.w3-container.w3-teal
+                adress Gerado por DAW TP5 App
