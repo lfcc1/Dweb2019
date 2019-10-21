@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/Filip/Documents/UM/DAW/TP3/pr.dtd">
+<pr>
+    <metadata>
+        <keyname>TP5</keyname>
+        <title>Desenvolvimento Aplicações Web</title>
+        <supervisor homepage="http://www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>Outubro 2019</bdate>
+        <edate>Outubro 2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>a83099 - MIEI</identifier>
+            <name>Luis Filipe da Costa Cunha</name>
+            <email>filipe-cunha1@hotmail.com</email>
+            <git>https://github.com/RyzonPT</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Este trabalho prático consistiu em criar um sistema de gestão de tarefas onde fosse possivel, na mesma página web, ver uma lista de tarefas e adicionar tarefas a essa lista.</p>
+        <p>Para isso, foram definidas as rotas principais <b>Post: "/tarefa"</b> e <b>GET: "/","/tarefas","/w3.css"</b>.</p>
+        <p>Para além disso ainda foi definido uma pagina de erro para qualquer outra entrada com um botão de redirecionamento para a página principal.</p>
+        <p>Finalmente, na pagina web desenvolvida foi adicionado um relógio extra para ajudar na seleção das datas limite</p>
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/blob/master/TP5/PR.xml">PR.xml</deliverable>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/blob/master/TP5/PR.html">PR.html</deliverable>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/blob/master/TP5/index.pug">index.pug</deliverable>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/blob/master/TP5/gestaotarefas.js">gestaotarefas.js</deliverable>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/blob/master/TP5/erro.pug">erro.pug</deliverable>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/blob/master/TP5/tarefas.json">tarefas.json</deliverable>
+    </deliverables>
+</pr>
