@@ -2,7 +2,7 @@
 <!DOCTYPE pr SYSTEM "file:/C:/Users/Filip/Documents/UM/DAW/TP3/pr.dtd">
 <pr>
     <metadata>
-        <keyname>TP5</keyname>
+        <keyname>TP6</keyname>
         <title>Desenvolvimento Aplicações Web</title>
         <supervisor homepage="http://www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
         <bdate>Outubro 2019</bdate>
@@ -21,6 +21,7 @@
         <p>Para isso, foi gerado um novo projeto com a ajuda das funcionalidades do node Express e do npm.</p>
         <p>Esta aplicação contem todas as rotas de delete,get,post e put para o seu bom funcionamente. Para fazer os pedidos ao sistema usei a framework Axios</p>
         <p>Para tornar este projecto mais desafiante, decidi englobar todos os elementos xml na nossa aplicação e, para além disso, toda a aplicação incide apenas numa página web.</p>
+        <p>Nota: os modulos do node foram removidos por questões de envio para o git.</p>
     </abstract>
     <deliverables>
         <deliverable path="https://github.com/RyzonPT/Dweb2019/blob/master/TP6/PR.xml">PR.xml</deliverable>
