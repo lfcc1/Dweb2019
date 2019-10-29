@@ -69,7 +69,7 @@ router.delete('/:index', function(req, res) {
 })
 })
 
-app.get('*', function(req, res){
+router.get('*', function(req, res){
   res.render('error', {error:erro})
 });
 
