@@ -1,0 +1,217 @@
+extends layout
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container.w3-teal
+                h3 Gestão de Arquivos Sonoros
+            .w3-container
+                    h2 Adicionar Música
+                    form
+                       label.w3-teal
+                           b Provincia
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='prov' id ='pprov' required)
+                       label.w3-teal
+                           b Local
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='local' id ='plocal' required)
+                       label.w3-teal
+                           b Titulo
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='tit' id ='ptit' required)
+                       label.w3-teal
+                           b Instrumentos
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='inst' id ='pinst')
+                       label.w3-teal
+                           b Duração
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='duracao' id ='pduracao')
+                       h2 Musico
+                       label.w3-teal
+                           b Musico
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='musico' id ='pmusico')
+                       label.w3-teal
+                           b From
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='from' id ='pfrom')
+                       label.w3-teal
+                           b Profissão
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='prof' id ='pprof')
+                       h2 Ficheiro
+                       label.w3-teal
+                           b Formato
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='_t' id ='p_t')
+                       label.w3-teal
+                           b Diretoria
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='__text' id ='p__text')
+                       h2 Observações
+                       label.w3-teal
+                           b Intxt
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='iintxt' id ='pintxt')
+                       label.w3-teal
+                           b Obs
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='iobs' id ='pobs')
+                       h4 Ficheiros:
+                       table.w3-table-all(id="pflist")
+                       input.w3-btn.w3-blue-grey(onclick="addFicheiroPost()" value ='Add Ficheiro')
+                       hr
+                       input.w3-btn.w3-blue-grey(onclick="createMusica()" value ='Criar Nova Musica')
+                       hr
+            h2 Lista de Arquivos Sonoros
+            .w3-card-4
+                
+                table.w3-table-all
+                    tr
+                        th Provincia
+                        th Titulo
+                        th Musico
+                        th Operações
+                        each a, index in lista
+                            tr
+                                td=a.prov
+                                td=a.tit
+                                if(a.musico)
+                                    if(a.musico.__text)
+                                        td=a.musico.__text
+                                    else 
+                                        td=a.musico
+                                else 
+                                    td="Musico Desconhecido"
+                                td(style="width: 10%;")
+                                    button.w3-button.w3-teal( style="margin-right: 10px;" onclick="openMusic('"+index+"')")
+                                        i.fa.fa-eye
+                                    button.w3-button.w3-teal( style="margin-right: 10px;" onclick="editMusica('" + index + "','"+a+"')")
+                                        i.fa.fa-refresh
+                                    button.w3-button.w3-teal( onclick="apagaMusica('"+index+"')")
+                                        i.fa.fa-trash
+                script(type='text/javascript').
+                    var musicas = !{JSON.stringify(lista)};
+                    function openMusic(index){
+                        //console.log(musicas)
+                        openViewModal(musicas[index]);
+                    }
+                    function editMusica(index){
+                        openEditModal(index);
+                    }
+            div(id="modalEdit" class="w3-modal")
+               div(class="w3-modal-content")
+                   div(class="w3-container" style='padding-bottom: 20px;')
+                      span(onclick="document.getElementById('modalEdit').style.display='none'" class="w3-button w3-display-topright") &times;
+                      h1 Editar Musica
+                      br
+                      form
+                       label.w3-teal
+                           b Provincia
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='prov' id ='iprov' required)
+                       label.w3-teal
+                           b Local
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='local' id ='ilocal' required)
+                       label.w3-teal
+                           b Titulo
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='tit' id ='itit' required)
+                       label.w3-teal
+                           b Instrumentos
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='inst' id ='iinst')
+                       label.w3-teal
+                           b Duração
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='duracao' id ='iduracao')
+                       h2 Musico
+                       label.w3-teal
+                           b Musico
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='musico' id ='imusico')
+                       label.w3-teal
+                           b From
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='from' id ='ifrom')
+                       label.w3-teal
+                           b Profissão
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='prof' id ='iprof')
+                       h2 Ficheiro
+                       label.w3-teal
+                           b Formato
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='_t' id ='i_t')
+                       label.w3-teal
+                           b Diretoria
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='__text' id ='i__text')
+                       h2 Observações
+                       label.w3-teal
+                           b Intxt
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='iintxt' id ='iintxt')
+                       label.w3-teal
+                           b Obs
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='iobs' id ='iobs')
+                       h4 Ficheiros:
+                       table.w3-table-all(id="flist")
+                       input.w3-btn.w3-blue-grey(onclick="addFicheiro()" value ='Add Ficheiro')
+                       input.w3-input.w3-border.w3-light-grey(type='hidden' name='index' id='editIndex')
+                       hr
+                       input.w3-btn.w3-blue-grey(onclick="updateMusica()" value ='Atualizar')
+
+
+            div(id="modalView" class="w3-modal")
+                div(class="w3-modal-content")
+                    div(class="w3-container" style='padding-bottom: 20px;')
+                        span(onclick="document.getElementById('modalView').style.display='none'" class="w3-button w3-display-topright") &times;
+                        h2 Consultar Musica
+                        br
+                        label.w3-teal
+                            b Provincia
+                        br
+                        label(id ='prov')
+                        br
+                        label.w3-teal
+                            b Local
+                        br
+                        label(id ='local')
+                        br
+                        label.w3-teal
+                            b Titulo
+                        br
+                        label(id ='tit')
+                        br
+                        div(id="divInst")
+                            label.w3-teal
+                                b Instrumentos
+                            br
+                            label(id ='inst')
+                            br
+                        div(id='divMusico')
+                            label.w3-teal
+                                b Musico
+                            br
+                            label(id ='musico')
+                            br
+                            div(id="fromDiv")
+                                label.w3-teal
+                                    b From
+                                br
+                                label(id ='from')
+                                br
+                            div(id="profDiv")
+                                label.w3-teal
+                                    b Profissão
+                                br
+                                label(id ='prof')
+                                br
+
+                        div(id="duracaoDiv")
+                            label.w3-teal
+                                b Duração
+                            br
+                            label(id ='duracao')
+                            br
+
+                        div(id ="ficheiroDiv")
+                            h2 Ficheiro:
+                            label.w3-teal
+                                b Formato
+                            br
+                            label(id ='_t')
+                            br
+                            label.w3-teal
+                                b Diretoria
+                            br
+                            label(id ='__text')
+                        
+                        div(id ="obsDiv")
+                            h2 Observações:
+                        
+                            
+                        
+
+            footer.w3-container.w3-teal
+                adress Gerado por Gestão de Arquivos Sonoros
