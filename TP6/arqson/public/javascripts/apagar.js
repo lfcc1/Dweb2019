@@ -215,8 +215,10 @@ function openViewModal(musica){
     else{
         $('#ficheiroDiv').hide();
     }
+    $("#obsDiv").html("");
 
     if(musica.obs != undefined){
+        $('#obsDiv').append("<h2>Observações </h2>")
         $('#obsDiv').show();
         for(f in musica.obs.file){
             var count = parseInt(f)+1;
@@ -226,10 +228,19 @@ function openViewModal(musica){
                                 "<label class ='w3-teal'><b>Diretoria</b></label></br>"+
                                 "<label>"+musica.obs.file[f].__text+"</label></br>")
         }
+
+        var aux;
+
+        if(musica.obs.__text != undefined){
+            aux = musica.obs.__text
         $('#obsDiv').append("<label class ='w3-teal'><b>Intxt</b></label></br>"+
-                            "<label>"+musica.obs.intxt+"</label></br>")
+            "<label>"+musica.obs.intxt+"</label></br>")
+        }
+        else aux = musica.obs
+
         $('#obsDiv').append("<label class ='w3-teal'><b>Obs:</b></label></br>"+
-                            "<label>"+musica.obs.__text+"</label></br>")
+                            "<label>"+aux+"</label></br>")
+            
     }
     else
     $('#obsDiv').hide();
