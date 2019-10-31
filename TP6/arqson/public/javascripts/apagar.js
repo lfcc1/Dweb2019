@@ -112,7 +112,10 @@ function updateMusica(){
 
 function openEditModal(index){
     var musica = musicas[index]
-
+    var tableBody = document.getElementById('flist');
+  	
+  	while (tableBody.childNodes.length) 
+  		tableBody.removeChild(tableBody.childNodes[0]);
 
     $('#iprov').val(musica.prov)
     $('#itit').val(musica.tit)
@@ -143,7 +146,6 @@ function openEditModal(index){
         $('#i_t').val(musica.file._t)
         $('#i__text').val(musica.file.__text)
     }
-
     if(musica.obs!= undefined){
         for(f in musica.obs.file){
             $('#flist').append("<tr><td><input class ='w3-input w3-border w3-light-grey' type='text' placeholder='Formato' value ="+musica.obs.file[f]._t+">"+
