@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/Filip/Documents/UM/DAW/TP3/pr.dtd">
+<pr>
+    <metadata>
+        <keyname>TP7</keyname>
+        <title>Desenvolvimento Aplicações Web</title>
+        <supervisor homepage="http://www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>Novembro 2019</bdate>
+        <edate>Novembro 2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>a83099 - MIEI</identifier>
+            <name>Luis Filipe da Costa Cunha</name>
+            <email>filipe-cunha1@hotmail.com</email>
+            <git>https://github.com/RyzonPT</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Este trabalho prático consistiu em contruir querys simples de Mongo e criar uma aplicação WEB com as operações CRUD sobre a base de dados de Filmes disponibilizado pelo Professor.</p>
+        <p>Para isso, foi gerado um novo projeto com a ajuda das funcionalidades do node Express, npm e mongoose.</p>
+        <p>Esta aplicação contem todas as rotas de delete,get,post e put necessárias ao seu bom funcionamente. Para fazer os pedidos ao sistema foi usada a framework Axios.</p>
+        <p>Mais uma vez, a interface incide maioritáriamente apenas numa página web para diminuir a quantidade de pedidos ao servidor.</p>
+        <p>Para além disso, devido ao facto de o dataset a ser tratado ter volume considerável, foram experimentadas daus abordagens para melhorar a velocidade de load da página.
+         A primeira abordágem foi gerar os dados de todos os filmes no front-end, isto é, criar todas as linhas da tabela com javascript na parte do cliente para diminuir a carga do servidor.
+         A segunda foi utilizar o pug para gerar todas as linhas da tabela.</p>
+         <p>De facto, a primeira abordagem mostrou-se bem mais lenta do que a segunda pelo que se utilizou o pug para tratar do trabalho pesado.</p>
+        
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/TP7/PR.xml">PR.xml</deliverable>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/TP7/PR.html">PR.html</deliverable>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/TP7/querys.txt">Querys Mongo</deliverable>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/TP7/Filmes">Projeto</deliverable>
+    </deliverables>
+</pr>

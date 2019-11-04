@@ -32,6 +32,17 @@ function createFilme(){
         .catch(error => console.log(error))
 }
 
+/*
+function teste(){
+    for(i in filmes)
+        $("#teste").append('<tr><td><a href="href= \"/filmes/\"' + filmes[i]._id+'">'+filmes[i].title+'</a></td>'+
+        '<td>'+filmes[i]._id+'</td>'+
+        '<td id="'+filmes[i]._id+'" style="width: 10%;">'+
+        '<button class="w3-button w3-teal" style="margin-right: 10px;" onclick="viewFilme('+i+')"> <i class= "fa fa-eye"></i></button>'+
+        '<button class="w3-button w3-teal" style="margin-right: 10px;" onclick="editFilme('+ i +')"><i class= "fa fa-refresh"></button>'+
+        '<button class="w3-button w3-teal" onclick="deleteFilme('+filmes[i]._id+')"><i class= "fa fa-trash"></button></td></tr>')
+}
+*/
 function updateFilme(){
     var filme = {};
     filme.title = $('#ititle').val()
