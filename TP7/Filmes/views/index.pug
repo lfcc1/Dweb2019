@@ -1,0 +1,111 @@
+extends layout
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container.w3-teal
+                h3 Gestão de Filmes
+            .w3-container
+                    h2 Adicionar Filme
+                    form
+                       label.w3-teal
+                           b Título
+                       input.w3-input.w3-border.w3-light-grey(type='text' id ='title' required)
+                       label.w3-teal
+                           b Ano
+                       input.w3-input.w3-border.w3-light-grey(type='text'  id ='year' required)
+                       label.w3-teal
+                           b Atores
+                       table.w3-table-all(id="aTable")
+                       input.w3-btn.w3-blue-grey(onclick="addTableRow('aTable','Nome')" value ='Add Ator')
+                       br
+                       label.w3-teal
+                           b Géneros
+                       table.w3-table-all(id="gTable")
+                       input.w3-btn.w3-blue-grey(onclick="addTableRow('gTable','Género')" value ='Add Género')
+                       hr
+                       input.w3-btn.w3-blue-grey(onclick="createFilme()" value ='Criar Novo Filme')
+                       hr
+            h2 Lista de Filmes
+            .w3-card-4
+                
+                table.w3-table-all
+                    tr
+                        th Título
+                        th Ano
+                        th Operações
+                        each a, index in lista
+                            tr  
+                                td
+                                    a(href= "/filmes/" + a._id)=a.title
+                                td=a._id
+                                td(id=a._id style="width: 10%;")
+                                    button.w3-button.w3-teal( style="margin-right: 10px;" onclick="viewFilme('"+index+"')")
+                                        i.fa.fa-eye
+                                    button.w3-button.w3-teal( style="margin-right: 10px;" onclick="editFilme('" + index + "')")
+                                        i.fa.fa-refresh
+                                    button.w3-button.w3-teal( onclick="deleteFilme('"+a.id+"')")
+                                        i.fa.fa-trash
+                script(type='text/javascript').
+                    var filmes = !{JSON.stringify(lista)};
+            div(id="modalEdit" class="w3-modal")
+               div(class="w3-modal-content")
+                   div(class="w3-container" style='padding-bottom: 20px;')
+                      span(onclick="document.getElementById('modalEdit').style.display='none'" class="w3-button w3-display-topright") &times;
+                      h1 Editar Filme
+                      br
+                      form
+                       label.w3-teal
+                           b Titulo
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='titulo' id ='ititle' required)
+                       br
+                       label.w3-teal
+                           b Ano
+                       input.w3-input.w3-border.w3-light-grey(type='text' name='year' id ='iyear' required)
+                       br
+                       label.w3-teal
+                           b Atores
+                       table.w3-table-all(id="aitable")
+                       input.w3-btn.w3-blue-grey(onclick="addTableRow('aitable','Nome')" value ='Add Ator')
+                       br
+                       br
+                       label.w3-teal
+                           b Géneros
+                       table.w3-table-all(id="gitable")
+                       input.w3-btn.w3-blue-grey(onclick="addTableRow('gitable','Género')" value ='Add Género')
+                       input.w3-input.w3-border.w3-light-grey(type='hidden' name='index' id='editIndex')
+                       hr
+                       input.w3-btn.w3-blue-grey(onclick="updateFilme()" value ='Atualizar')
+
+
+            div(id="modalView" class="w3-modal")
+                div(class="w3-modal-content")
+                    div(class="w3-container" style='padding-bottom: 20px;')
+                        span(onclick="document.getElementById('modalView').style.display='none'" class="w3-button w3-display-topright") &times;
+                        h2 Consultar Filme
+                        br
+                        label.w3-teal
+                            b Titulo
+                        br
+                        label(id ='vtitle')
+                        br
+                        br
+                        label.w3-teal
+                            b Ano
+                        br
+                        label(id ='vyear')
+                        br  
+                        br
+                        label.w3-teal
+                            b Atores            
+                        div(id ="vcastDiv")
+                        br
+                        label.w3-teal
+                            b Géneros            
+                        div(id ="vgenresDiv")
+                            
+                        
+                            
+                        
+
+            footer.w3-container.w3-teal
+                adress Gerado por Gestão de Filmes
