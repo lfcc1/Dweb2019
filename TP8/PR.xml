@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/Filip/Documents/UM/DAW/TP3/pr.dtd">
+<pr>
+    <metadata>
+        <keyname>TP8</keyname>
+        <title>Desenvolvimento Aplicações Web</title>
+        <supervisor homepage="http://www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>Novembro 2019</bdate>
+        <edate>Novembro 2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>a83099 - MIEI</identifier>
+            <name>Luis Filipe da Costa Cunha</name>
+            <email>filipe-cunha1@hotmail.com</email>
+            <git>https://github.com/RyzonPT</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Este trabalho consistiu em criar uma app WEB estruturada com duas routes principais, API e Interface.</p>
+        <p>Para isso, foi gerado um novo projeto com a ajuda das funcionalidades do node Express, npm mongoose e Axios.</p>
+        <p>Diferente das aplicações web anteriores, esta recebe todos os pedidos do cliente para a Route da interface a qual pede, posteriormente, os dados à Route da API que irá depois buscar os dados à camada de persistência.</p>
+        <p>De facto, esta abordagem permo-te um maior controlo pelo que o cliente nunca tem contaco direto com a camada de dados o que se traduz em maior segurança.</p>
+        <p>Por outro lado, gerir a aplicação em 3 camadas distintas, interface, funcionalidade e persistência de dados, faz com que toda a aplicação esteja bem mais organizada.</p>
+        <p>Podemos ainda ver que este tipo de arquitetura do sistema nos permite separar estas camadas em diferentes servidores, o que pode ser uma vantágem na gestão dos servidores, quer seja por performance ou segurança.</p>
+        
+        
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/TP8/PR.xml">PR.xml</deliverable>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/TP8/PR.html">PR.html</deliverable>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/TP8/premios">Projeto</deliverable>
+    </deliverables>
+</pr>

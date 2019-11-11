@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .w3-container
+    h1 Lista de Categoria
+    
+    table.w3-table-all
+                    tr
+                        th Categoria
+
+                        each a, index in lista
+                            tr  
+                                td=a._id
+    adress
+        a(href="http://localhost:3005/") HomePage
+                          

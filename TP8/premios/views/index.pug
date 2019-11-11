@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  .w3-container
+    h1 Gestão de Premios
+    ul.w3-ul
+      li
+        a(href="http://localhost:3005/premios") Listar Premios
+      li
+        a(href="http://localhost:3005/premios/categorias") Listar Categorias
+      li Procurar Prémio por categoria
+                form.w3-contairner(action='/premios' method ='GET')
+                    label
+                        b Categoria
+                    input.w3-input.w3-border.w3-light-grey( required type='text' name='categoria' style="width: 20%;  margin-bottom: 10px;")
+                    input.w3-btn.w3-blue-grey(type = 'submit' value ='Procurar')
+      li Procurar Prémio por categoria e com Ano superior ao indicado
+                form.w3-contairner(action='/premios' method ='GET')
+                    label
+                        b Categoria
+                    input.w3-input.w3-border.w3-light-grey(required type='text' name='categoria' style="width: 20%;")
+                    label
+                        b Ano
+                    input.w3-input.w3-border.w3-light-grey(required type='text' name='data' style="width: 20%; margin-bottom: 10px;")
+                    input.w3-btn.w3-blue-grey(type = 'submit' value ='Procurar')
+      li
+        a(href="http://localhost:3005/premios/laureados") Listar Laureados

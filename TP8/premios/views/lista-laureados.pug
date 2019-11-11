@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .w3-container
+    h1 Lista de Laureados
+    
+    table.w3-table-all
+                tr
+                    th Ano
+                    th Categoria
+                    th Primeiro Nome
+                    th Ultimo Nome
+                   
+
+                    each l, index in lista
+                        tr  
+                            td=l.year
+                            td=l.category
+                            td=l.laureates.firstname
+                            td=l.laureates.surname
+    adress
+        a(href="http://localhost:3005/") HomePage
+                          

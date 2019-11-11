@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  .w3-container
+    h1 Lista de Premios
+    
+    table.w3-table-all
+                    tr
+                        th Identificador
+                        th Nome
+                        th Operações
+
+                        each a, index in lista
+                            tr(id=a._id)  
+                                td=a.category
+                                td=a.year
+                                td
+                                  button.w3-button.w3-circle(onclick="window.location.href='/premios/"+a._id+"'") Consultar
+    adress
+        a(href="http://localhost:3005/") HomePage
+                          

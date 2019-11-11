@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  .w3-container
+    h1 Consultar Premio
+    label Categoria:
+    p=a.category
+    label Ano:
+    p=a.year
+    label Motivação Geral:
+    p=a.overallMotivation
+    table.w3-table-all
+                tr
+                    th Identificador
+                    th Primeiro Nome
+                    th Ultimo Nome
+                    th Motivação
+                    th Partilha
+
+                    each l, index in a.laureates
+                        tr  
+                            td=l.id
+                            td=l.firstname
+                            td=l.surname
+                            td=l.motivation
+                            td=l.share
+
+    adress
+        a(href="http://localhost:3005/premios#"+a._id) Voltar
+    
+                                    
