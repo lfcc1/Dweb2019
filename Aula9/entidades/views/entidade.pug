@@ -1,0 +1,65 @@
+extends layout
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container.w3-teal
+                h2.w3-center Ver Entidade
+                center
+                    img(src='https://upload.wikimedia.org/wikipedia/en/e/ed/Nobel_Prize.png' style='width:120px; height:120px;')
+            .w3-container
+                table.w3-table.w3-centered
+                    tr
+                        th.w3-gray 
+                            b Sigla
+                        td.w3-light-gray=e.sigla
+                    tr   
+                        th.w3-gray 
+                            b Designacao
+                        td.w3-light-gray=e.designacao
+                .w3-container
+                    if t.length>0
+                        h4.w3-amber.w3-center Topologias
+                        each l in t
+                            p
+                                table.w3-table
+                                    tr
+                                        th.w3-gray 
+                                            b Sigla
+                                        td.w3-light-gray=l.sigla
+                                    tr
+                                        th.w3-gray 
+                                            b Designacao
+                                        td.w3-light-gray=l.designacao
+                    if d.length>0
+                        h4.w3-amber.w3-center Donos
+                        each l in d
+                            p
+                                table.w3-table
+                                    tr
+                                        th.w3-gray 
+                                            b Código
+                                        td.w3-light-gray=l.codigo
+                                    tr
+                                        th.w3-gray 
+                                            b Título
+                                        td.w3-light-gray=l.titulo
+                    if p.length>0
+                        h4.w3-amber.w3-center Participantes
+                        each l in p
+                            p
+                                table.w3-table
+                                    tr
+                                        th.w3-gray 
+                                            b Código
+                                        td.w3-light-gray=l.codigo
+                                    tr
+                                        th.w3-gray 
+                                            b Título
+                                        td.w3-light-gray=l.titulo
+                                    tr
+                                        th.w3-gray 
+                                            b Tipo
+                                        td.w3-light-gray=l.tipoPar
+                .w3-container
+                    form(action="/").w3-center
+                        button(type='submit' class="fa fa-home" style="background-color: #FFBF00; color: black; padding: 22px 22px; border-radius: 12px;").w3-hover-teal    Voltar à Lista de Entidades
