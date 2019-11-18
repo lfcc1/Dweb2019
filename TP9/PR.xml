@@ -28,6 +28,6 @@
     <deliverables>
         <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/TP9/PR.xml">PR.xml</deliverable>
         <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/TP9/PR.html">PR.html</deliverable>
-        <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/TP9/mongoimport">mongoImport.js</deliverable>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/TP9/mongoImport.js">mongoImport.js</deliverable>
     </deliverables>
 </pr>
