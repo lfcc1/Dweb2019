@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/Filip/Documents/UM/DAW/TP3/pr.dtd">
+<pr>
+    <metadata>
+        <keyname>TP9</keyname>
+        <title>Desenvolvimento Aplicações Web</title>
+        <supervisor homepage="http://www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>Novembro 2019</bdate>
+        <edate>Novembro 2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>a83099 - MIEI</identifier>
+            <name>Luis Filipe da Costa Cunha</name>
+            <email>filipe-cunha1@hotmail.com</email>
+            <git>https://github.com/RyzonPT</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Este trabalho consistiu em desenvolver um programa semelhante ao mongoimport, isto é, criar uma base de dados Mongo através de um fichero em formato JSON.</p>
+        <p>Para isso, foi gerado um programa divido em 3 fases, validação de input, criação do schema da BD e carregamento dos dados.</p>
+        <p>A validação garante que o formato do input recebido é valido, por exemplo, se o ficheiro introduzido existe e se encontra em formato JSON.</p>
+        <p>Depois, com a ajuda das funcinalidades fornecidas pela biblioteca mongoose, o ficheiro json de input é analisado para se criar o schema dinámicamente.</p>
+        <p>Por fim, mais uma vez com a ajuda do mongoose são inseridos todos os dados, do ficheiro input, na base de dados mongo, já preparada para os receber.</p>
+        
+        
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/TP9/PR.xml">PR.xml</deliverable>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/TP9/PR.html">PR.html</deliverable>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/TP9/mongoimport">mongoImport.js</deliverable>
+    </deliverables>
+</pr>
