@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/Filip/Documents/UM/DAW/TP3/pr.dtd">
+<pr>
+    <metadata>
+        <keyname>TP10</keyname>
+        <title>Desenvolvimento Aplicações Web</title>
+        <supervisor homepage="http://www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>Novembro 2019</bdate>
+        <edate>Novembro 2019</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>a83099 - MIEI</identifier>
+            <name>Luis Filipe da Costa Cunha</name>
+            <email>filipe-cunha1@hotmail.com</email>
+            <git>https://github.com/RyzonPT</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Este trabalho consistiu em desenvolver servidor de upload e download de ficheiros.</p>
+        <p>O desafio deste trabalho prático foi criar um servidor capaz fazer upload de multiplos ficheiros em simultáneo.</p>
+        
+        
+        
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/TP10/PR.xml">PR.xml</deliverable>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/TP10/PR.html">PR.html</deliverable>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/TP10/gficheiros">Servidor</deliverable>
+    </deliverables>
+</pr>
