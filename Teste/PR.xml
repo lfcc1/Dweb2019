@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/Filip/Documents/UM/DAW/TP3/pr.dtd">
+<pr>
+    <metadata>
+        <keyname>Teste DWEB</keyname>
+        <title>Desenvolvimento Aplicações Web</title>
+        <supervisor homepage="http://www.di.uminho.pt/~jcr">José Carlos Ramalho</supervisor>
+        <bdate>Janeiro 2020</bdate>
+        <edate>Janeiro 2020</edate>
+    </metadata>
+    <workteam>
+        <worker>
+            <identifier>a83099 - MIEI</identifier>
+            <name>Luis Filipe da Costa Cunha</name>
+            <email>filipe-cunha1@hotmail.com</email>
+            <git>https://github.com/RyzonPT</git>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>Este Teste consiste em dois exercícios distintos.</p>
+        <p>O primeiro exercício consiste em criar uma API de dados a partir de um ficheiro XML fornecido.
+        Em primeiro lugar, foi necessário transformar o ficheiro XML em ficheiro JSON. Para isso foi usado um conversor online para agilziar o processo de transformação.
+        </p>
+            <p>Depois foi utilizada uma base de dados Mongo para realizar a persistencia do sistema. Para importar o dataset foi utilizado o seguinte comando: 
+                mongoimport --db musicas --collection musicas --file arquivo-musica-digital.json --jsonArray
+            </p>
+        <p>Por fim, foram criados os models e controllers necessários para criar as rotas pedidas no enunciado.</p>
+       
+        <p>O segundo exercicio consiste em consumir uma API de dados pré-feita. 
+            Este tem como objectivo criar uma interface que apresente os dados da API permitindo a navegação sobre a estrutura dos mesmos. </p>
+            <p>Para além disso, foram resolvidas quatro questões. As responstas são as seguintes</p>
+        <p>Resposta 1: 546 entidades</p>
+        <p>Resposta 2: Administração Pública , Autoridades de supervisão e fiscalização</p>
+        <p>Resposta 3: codigo: 400.10.056,
+            titulo: Registo nacional de condutores</p>
+        <p>Resposta 4: codigo: 750.20.601,
+            titulo: Realização de atividades de formação e treino animal</p>
+        
+        
+    </abstract>
+    <deliverables>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/Teste/PR.xml">PR.xml</deliverable>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/Teste/PR.html">PR.html</deliverable>
+        <deliverable path="https://github.com/RyzonPT/Dweb2019/tree/master/Teste/">Teste</deliverable>
+    </deliverables>
+</pr>
